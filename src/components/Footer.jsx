@@ -3,8 +3,8 @@ import { site } from '../data/site'
 
 const links = [
   { id: 'about', key: 'about' },
+  { id: 'offers', key: 'offers' },
   { id: 'projects', key: 'projects' },
-  { id: 'services', key: 'services' },
   { id: 'stack', key: 'stack' },
   { id: 'contact', key: 'contact' },
 ]

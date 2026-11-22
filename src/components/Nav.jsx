@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Icon from './Icon'
 
-const sectionIds = ['about', 'projects', 'services', 'stack', 'contact']
+const sectionIds = ['about', 'offers', 'projects', 'stack', 'contact']
 
 function LangSwitch({ lang, setLang, label }) {
   return (
@@ -89,8 +89,8 @@ export default function Nav({ copy, lang, setLang, emailHref }) {
 
   const links = [
     { id: 'about', label: copy.nav.about },
+    { id: 'offers', label: copy.nav.offers },
     { id: 'projects', label: copy.nav.projects },
-    { id: 'services', label: copy.nav.services },
     { id: 'stack', label: copy.nav.stack },
     { id: 'contact', label: copy.nav.contact },
   ]

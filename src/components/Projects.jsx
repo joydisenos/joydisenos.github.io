@@ -41,7 +41,7 @@ export default function Projects({ copy, lang }) {
             ))}
           </div>
           <span className="toolbar-note" aria-hidden="true">
-            <Icon name="terminal" size={14} /> filter: {filter}
+            <Icon name="arrowRight" size={14} /> filter: {filter}
           </span>
         </Reveal>
 
@@ -93,6 +93,29 @@ export default function Projects({ copy, lang }) {
                   </h3>
                   <p className="project-tagline">{l10n.tagline}</p>
                   <p className="project-desc">{l10n.description}</p>
+
+                  {l10n.challenge ? (
+                    <details className="case-study">
+                      <summary>
+                        <Icon name="arrowRight" size={14} />
+                        {copy.caseLabel}
+                      </summary>
+                      <dl className="case-list">
+                        <div>
+                          <dt>{copy.challenge}</dt>
+                          <dd>{l10n.challenge}</dd>
+                        </div>
+                        <div>
+                          <dt>{copy.solution}</dt>
+                          <dd>{l10n.solution}</dd>
+                        </div>
+                        <div>
+                          <dt>{copy.result}</dt>
+                          <dd>{l10n.result}</dd>
+                        </div>
+                      </dl>
+                    </details>
+                  ) : null}
 
                   <div className="project-foot">
                     <ul className="tags" aria-label="Stack">

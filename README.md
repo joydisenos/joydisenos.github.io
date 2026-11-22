@@ -9,8 +9,10 @@ Portafolio profesional y página de contacto para **Joseph Vásquez**, desarroll
 - SPA de una sola página con navegación por secciones y scroll suave.
 - Diseño responsive (móvil, tablet y escritorio) con animaciones de entrada y respeto por `prefers-reduced-motion`.
 - Bilingüe **ES / EN**: el idioma se guarda en `localStorage` y actualiza `<html lang>`, el título y la meta descripción.
-- Sección de proyectos con filtros por categoría y capturas reales de cada sitio.
-- Formulario de contacto sin backend: compone un `mailto:` con los datos ingresados.
+- Sección de proyectos con filtros por categoría, capturas reales y casos con reto, solución y resultado.
+- Ofertas rápidas (sitio/landing, rescate WordPress/PHP/Laravel, módulo o app a medida) con tiempos y entregables.
+- Formulario de contacto sin backend que preselecciona la oferta elegida y compone un `mailto:` con los datos ingresados.
+- Servicios y stack con React Native para apps móviles.
 - Datos estructurados JSON-LD, Open Graph, sitemap, robots.txt y favicon.
 - Accesibilidad auditada con Lighthouse (100 en accesibilidad, buenas prácticas y SEO).
 - Botones de descarga del CV y enlaces a WhatsApp / email.

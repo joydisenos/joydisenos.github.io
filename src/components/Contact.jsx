@@ -1,13 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Reveal from './Reveal'
 import SectionHead from './SectionHead'
 import Icon from './Icon'
 import { site } from '../data/site'
 
-export default function Contact({ copy }) {
+export default function Contact({ copy, interest }) {
   const [form, setForm] = useState({ name: '', email: '', type: '0', message: '' })
   const [status, setStatus] = useState('')
   const [copied, setCopied] = useState(false)
+
+  useEffect(() => {
+    if (!interest) return
+    setForm((current) => ({ ...current, type: String(interest.typeIndex) }))
+  }, [interest])
 
   const update = (field) => (event) => {
     setForm((current) => ({ ...current, [field]: event.target.value }))
@@ -109,6 +114,14 @@ export default function Contact({ copy }) {
 
           <Reveal delay={140} className="contact-form-wrap">
             <form className="contact-form" onSubmit={onSubmit}>
+              {interest ? (
+                <p className="form-preset">
+                  <Icon name="check" size={14} />
+                  <span>{copy.form.preset}</span>
+                  <strong>{copy.form.types[Number(form.type)]}</strong>
+                </p>
+              ) : null}
+
               <div className="form-row">
                 <div className="field">
                   <label htmlFor="name">{copy.form.name}</label>
