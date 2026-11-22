@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { content } from './data/content'
-import { site } from './data/site'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
@@ -49,7 +48,6 @@ export default function App() {
         copy={{ nav: copy.nav, footer: copy.footer }}
         lang={lang}
         setLang={setLang}
-        emailHref={`mailto:${site.email}`}
       />
 
       <main id="main">

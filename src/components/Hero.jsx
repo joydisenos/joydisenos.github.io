@@ -62,7 +62,7 @@ export default function Hero({ copy }) {
                 {copy.primary}
                 <Icon name="arrowRight" size={17} />
               </a>
-              <a className="btn btn--ghost" href={site.cv} download>
+              <a className="btn btn--ghost" href={site.cv} download="Joseph-Vasquez-CV.pdf">
                 <Icon name="download" size={17} />
                 {copy.secondary}
               </a>

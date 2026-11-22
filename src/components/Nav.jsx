@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Icon from './Icon'
+import { site } from '../data/site'
 
 const sectionIds = ['about', 'offers', 'projects', 'stack', 'contact']
 
@@ -22,7 +23,7 @@ function LangSwitch({ lang, setLang, label }) {
   )
 }
 
-export default function Nav({ copy, lang, setLang, emailHref }) {
+export default function Nav({ copy, lang, setLang }) {
   const [scrolled, setScrolled] = useState(false)
   const [progress, setProgress] = useState(0)
   const [open, setOpen] = useState(false)
@@ -97,6 +98,8 @@ export default function Nav({ copy, lang, setLang, emailHref }) {
 
   const close = () => setOpen(false)
 
+  const whatsappHref = `${site.whatsapp}?text=${encodeURIComponent(copy.nav.ctaMessage)}`
+
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="scroll-progress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />
@@ -124,7 +127,12 @@ export default function Nav({ copy, lang, setLang, emailHref }) {
         <div className="nav-actions">
           <LangSwitch lang={lang} setLang={setLang} label={copy.nav.switchLang} />
 
-          <a className="btn btn--primary btn--sm nav-cta" href={emailHref}>
+          <a
+            className="btn btn--primary btn--sm nav-cta"
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {copy.nav.cta}
             <Icon name="arrowUpRight" size={15} />
           </a>
@@ -154,7 +162,13 @@ export default function Nav({ copy, lang, setLang, emailHref }) {
         </nav>
         <div className="mobile-menu-foot">
           <LangSwitch lang={lang} setLang={setLang} label={copy.nav.switchLang} />
-          <a className="btn btn--primary btn--sm" href={emailHref} onClick={close}>
+          <a
+            className="btn btn--primary btn--sm"
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={close}
+          >
             {copy.nav.cta}
             <Icon name="arrowUpRight" size={15} />
           </a>
