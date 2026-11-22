@@ -207,7 +207,7 @@ export const content = {
       },
     },
     footer: {
-      tagline: 'Diseño y desarrollo web desde Venezuela para el mundo.',
+      tagline: 'Software que resuelve problemas concretos: automatización de procesos, flujos de trabajo y tareas repetitivas.',
       built: 'Sitio construido con React + Vite.',
       code: 'Ver código en GitHub',
       rights: 'Todos los derechos reservados.',
@@ -426,7 +426,7 @@ export const content = {
       },
     },
     footer: {
-      tagline: 'Web design and development from Venezuela to the world.',
+      tagline: 'Software that solves concrete problems: automation of processes, workflows and repetitive tasks.',
       built: 'Built with React + Vite.',
       code: 'View code on GitHub',
       rights: 'All rights reserved.',
